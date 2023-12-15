@@ -1,20 +1,20 @@
+{% extends "myapp/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
-        <title>Document</title>
-    </head>
-    <body>
-        <nav>
-            <div>
-                <div>
-                    <div>
-                        <div class="flex">
+{% block content %}
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex justify-between">
+                    <div class="flex space-x-7">
+                        <div>
+                            <a href="#" class="flex items-center px-2 py-4">
                             <img class="h-8 w-8" src="{% static 'myapp/images/book.png' %}" alt="logo"/>
-                            <span class="text-xl">ЕГЭ</span>
+                            <span class="text-gray-500 font-semibold text-xl">ЕГЭ</span>
+                          </a>
+                        </div>
+                        <div class="items-center flex space-x-1">
+                          <a href="#" class="py-4 px-2 text-gray-500 font-semibold border-b-4 border-green-500">Главная страница</a>
+                          <a href="#" class="py-4 px-2 text-gray-500 font-semibold">О сайте</a>
+                          <a href="#" class="py-4 px-2 text-gray-500 font-semibold">Контакты</a>
                         </div>
                     </div>
                 </div>
@@ -29,5 +29,4 @@
             </a>
             {% endfor %}
         </h4>
-    </body>
-</html>
+{% endblock content %}
